@@ -1,7 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dren3_000
- * Date: 21.07.2015
- * Time: 22:36
- */
+
+abstract class AbstractEntity implements IArrayConvertible
+{
+    private $id;
+    public function toArray()
+    {
+
+    }
+    public static function fromArray()
+    {
+
+    }
+}
+
+?>

@@ -1,7 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dren3_000
- * Date: 21.07.2015
- * Time: 23:46
- */
+if(!$isset($startPath))
+    $startPath = "";
+include_once($_SERVER["DOCUMENT_ROOT"].$startPath."/lib/include/EventLogger.php");
+set_include_path($_SERVER["DOCUMENT_ROOT"].$startPath."/lib/include/");
+function __autoload($className)
+{
+    include $className.".php";
+    EventLogger::logDebug("Loaded class ".$className);
+}
+
+?>

@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dren3_000
- * Date: 21.07.2015
- * Time: 22:35
- */
+
+interface IArrayConvertible
+{
+    /*
+     * Zamienia obiekt na tablicę
+     * @return array
+     */
+    public function toArray();
+    /*
+     * Generuje nową instancję z tablicy
+     * @return IArrayConvertible
+     */
+    public static function fromArray();
+}
+
+?>
